@@ -1,0 +1,26 @@
+{
+  "name": "splider",
+  "version": "1.0.0",
+  "description": "smiple splider program",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "splider"
+  ],
+  "author": "wangdi",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.2.0"
+  },
+  "devDependencies": {
+    "bluebird": "^3.5.0",
+    "cheerio": "^0.22.0",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.3",
+    "qiniu": "^6.1.13",
+    "superagent": "^3.5.2",
+    "uuid": "^3.0.1"
+  }
+}
