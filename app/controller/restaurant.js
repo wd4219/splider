@@ -14,7 +14,7 @@ exports.saveFromSplider = function(req,res){
           console.log(err);
         }
         else{
-          console.log('成功');
+          console.log('restaurant保存成功');
         }
       });
     }

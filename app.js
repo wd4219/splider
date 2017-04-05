@@ -27,9 +27,6 @@ mongoose.connect(DB_URL);
 //     })
 // }
 // walk(models_path)
-// console.log(tools.restarant_iamge('5da3872d782f707b4c82ce4607c73d1ajpeg'));
-splider.restaurant(31.20597,121.46792);
 
-
-// splider.menu(161235);
-// splider.rating(161235);
+// splider.restaurant(31.21597,121.46792);
+splider.menu(302449);

@@ -14,7 +14,7 @@ exports.save = function(req,res){
           console.log(err);
         }
         else{
-          console.log('成功');
+          console.log('image保存成功');
         }
       });
     }
