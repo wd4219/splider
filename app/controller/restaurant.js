@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const RestaurantSchema = require('../schemas/restaurant');
-const RestaurantModel = mongoose.model('RestaurantModel',RestaurantSchema);
+const RestaurantModel = require('../model/restaurant');
 
 exports.saveFromSplider = function(req,res){
   RestaurantModel.findOne({id:req.id},function(err,restaurant){

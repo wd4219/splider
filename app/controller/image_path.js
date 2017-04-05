@@ -1,6 +1,5 @@
-var mongoose = require('mongoose');
-var ImagePathSchema = require('../schemas/image_path')
-var ImagePath = mongoose.model('ImagePath',ImagePathSchema);
+const mongoose = require('mongoose');
+const ImagePath = require('../model/image_path');
 
 exports.save = function(req,res){
   ImagePath.findOne({url:req.url},function(err,imagepath){
