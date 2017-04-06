@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
-const RatingModel = require('../model/rating');
+const RatingModel = require('../models/rating');
 
 exports.save = function(req,res){
-  RatingModel.findOne({restaurant_id:req.restaurant_id},function(err,menu){
+  RatingModel.findOne({restaurant_id:req.restaurant_id},function(err,rating){
     if(err){
       console.log(err);
     }
-    if(!menu){
-      menu = new RatingModel(req);
-      menu.save(function(err,menu){
+    if(!rating){
+      rating = new RatingModel(req);
+      rating.save(function(err,rating){
         if(err){
           console.log(err);
         }

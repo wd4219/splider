@@ -16,12 +16,12 @@ module.exports.image_name=function(path){
 }
 module.exports.restarant_iamge = function(path,image_type){
   if(image_type == 1){//餐馆图标
-    return 'https://fuss10.elemecdn.com/'+ this.split_path(path)+'?imageMogr/format/webp/';
+    return 'http://fuss10.elemecdn.com/'+ this.split_path(path)+'?imageMogr/format/webp/';
   }
   if(image_type == 2){//右边分类条icon
-    return 'https://fuss10.elemecdn.com/'+this.split_path(path);
+    return 'http://fuss10.elemecdn.com/'+this.split_path(path);
   }
   if(image_type == 3){//食物图片
-    return 'https://fuss10.elemecdn.com/' + this.split_path(path)+'?imageMogr/thumbnail/140x140/format/webp/quality/85';
+    return 'http://fuss10.elemecdn.com/' + this.split_path(path)+'?imageMogr/thumbnail/140x140/format/webp/quality/85';
   }
 }

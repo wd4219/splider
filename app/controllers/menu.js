@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const MenuModel = require('../model/menu');
+const MenuModel = require('../models/menu');
 
 exports.save = function(req,res){
   MenuModel.findOne({restaurant_id:req.restaurant_id},function(err,menu){

@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let ImagePathSchema = new Schema({
+let ImageSchema = new Schema({
   url:String,
+  name:String,
   meta: {
     createAt: {
       type: Date,
@@ -15,7 +16,7 @@ let ImagePathSchema = new Schema({
   }
 });
 
-ImagePathSchema.pre('save', function(next) {
+ImageSchema.pre('save', function(next) {
   if (this.isNew) {
     this.meta.createAt = this.meta.updateAt = Date.now();
   }
@@ -26,4 +27,4 @@ ImagePathSchema.pre('save', function(next) {
   next();
 });
 
-module.exports = ImagePathSchema
+module.exports = ImageSchema

@@ -9,6 +9,7 @@ let RestaurantSchema = new Schema({
   address:String,
   is_new:Boolean,
   latitude:String,
+  name:String,
   longitude:String,
   opening_hours:[],
   order_lead_time:Number,
