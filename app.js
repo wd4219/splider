@@ -10,8 +10,14 @@ const DB_URL = 'mongodb://localhost/xiaodiwaimai';
 mongoose.connect(DB_URL);
 // mongoose.set('debug', true);
 
-
+// tools.empty();
 splider.restaurant(30.25924,120.21937);
 
-
+// Restaurant.find(function(results){
+//   for(let i = 0;i < results.length;i++){
+//     setTimeout(function(){
+//       splider.menu(results[i]);
+//     },i*2000);
+//   }
+// });
 // Image.find(file.downLoadImage);

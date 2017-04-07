@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const RestaurantModel = require('../models/restaurant');
+const splider = require('../../splider/index');
 
 exports.saveFromSplider = function(req,res){
   RestaurantModel.findOne({id:req.id},function(err,restaurant){
@@ -14,18 +15,10 @@ exports.saveFromSplider = function(req,res){
         }
         else{
           console.log('restaurant保存成功');
+          splider.rating(req.id);
         }
       });
     }
-  });
-},
-exports.findone = function(req,res){
-  RestaurantModel.findOne({id:'553877'},function(err,restaurant){
-    if(err){
-      console.log(err);
-    }
-    console.log(!restaurant);
-    
   });
 }
 exports.find = function(cb){

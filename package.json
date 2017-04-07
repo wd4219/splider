@@ -17,6 +17,7 @@
   "devDependencies": {
     "bluebird": "^3.5.0",
     "cheerio": "^0.22.0",
+    "geo-hash": "^0.0.2",
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.3",
     "node-schedule": "^1.2.1",

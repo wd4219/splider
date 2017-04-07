@@ -5,9 +5,12 @@ const tools = require('../tools');
 const config = require('../config');
 const Image = require('../app/controllers/image');
 
-exports.getRestaurant = function (url,callback) {
+exports.getRestaurant = function (url, callback) {
   superagent.get(url).
   end(function (err, res) {
+    if (err) {
+      console.log(err);
+    } else {
       res.body.forEach(function (item) {
         var activities = [];
         item.activities.forEach(function (act_item) {
@@ -37,10 +40,10 @@ exports.getRestaurant = function (url,callback) {
           activities: activities,
           address: item.address,
           is_new: item.is_new,
+          is_brand: item.is_premium,
           id: item.id,
           name: item.name,
-          latitude: item.latitude,
-          longitude: item.longitude,
+          coordinate: [item.longitude,item.latitude],
           opening_hours: item.opening_hours,
           order_lead_time: item.order_lead_time,
           phone: item.phone,
@@ -53,8 +56,8 @@ exports.getRestaurant = function (url,callback) {
           supports: supports
         }
         Restaurant.saveFromSplider(data);
-        splider.rating(item.id);
       });
-      callback(null);
+    }
+    callback(null);
   });
 }
