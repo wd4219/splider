@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 const Image = require('../models/image');
 
+/**
+ * 保存爬到图片的数据
+ * 
+ * @param {any} req 
+ * @param {any} res 
+ */
 exports.save = function(req,res){
   Image.findOne({url:req.url},function(err,image){
     if(err){

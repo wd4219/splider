@@ -5,6 +5,12 @@ const tools = require('../tools');
 const config = require('../config');
 const Image = require('../app/controllers/image');
 
+/**
+ * 爬取餐馆信息
+ * 
+ * @param {any} url 
+ * @param {any} callback 
+ */
 exports.getRestaurant = function (url, callback) {
   superagent.get(url).
   end(function (err, res) {

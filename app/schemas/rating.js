@@ -3,10 +3,9 @@ const Schema = mongoose.Schema;
 
 let RatingSchema = new Schema({
   restaurant_id:{
-    unique:true,
     type:String
   },
-  content:[],
+  content:{},
   meta:{
     createAt:{
       type:Date,

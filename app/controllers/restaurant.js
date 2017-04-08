@@ -2,6 +2,12 @@ const mongoose = require('mongoose');
 const RestaurantModel = require('../models/restaurant');
 const splider = require('../../splider/index');
 
+/**
+ * 保存爬到的餐馆信息
+ * 
+ * @param {any} req 
+ * @param {any} res 
+ */
 exports.saveFromSplider = function(req,res){
   RestaurantModel.findOne({id:req.id},function(err,restaurant){
     if(err){

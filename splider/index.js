@@ -6,7 +6,6 @@ const restaurant = require('./restaurant');
 const rating = require('./rating');
 const menu = require('./menu');
 const async = require('async');
-const Rating = require('../app/controllers/rating');
 /**
  * 爬取餐馆信息的函数
  * 
@@ -82,16 +81,5 @@ module.exports.rating = function (restaurant_id) {
         seven:function (callback) {
            rating.getRating('https://mainsite-restapi.ele.me/ugc/v2/restaurants/' + restaurant_id + '/ratings?has_content=true&offset=120&limit=20', restaurant_id,callback);
         }
-    }, function (err, results) {
-        var content = [];
-        for(let key in results){
-           content = content.concat(results[key]); 
-        };
-        var rating = {
-            restaurant_id:restaurant_id,
-            content:content,
-        };
-        console.log(restaurant_id+'爬取完成');
-        Rating.save(rating);
     });
 }

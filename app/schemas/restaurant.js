@@ -42,5 +42,6 @@ RestaurantSchema.pre('save', function (next) {
 
   next();
 });
+RestaurantSchema.index({'coordinate':'2dsphere'});
 
 module.exports = RestaurantSchema;
