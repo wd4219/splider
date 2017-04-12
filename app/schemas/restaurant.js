@@ -6,6 +6,7 @@ let RestaurantSchema = new Schema({
     unique: true,
     type: String
   },
+  activities:[],
   address: String,
   is_new: Boolean,
   is_brand: Boolean,

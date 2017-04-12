@@ -20,7 +20,6 @@ exports.getMenu = function (restaurant_id) {
           restaurant_id: restaurant_id,
           content: []
         };
-        console.log(res.body);
         res.body.forEach(function (item) {
           var foods = [];
           item.foods.forEach(function (item) {

@@ -35,11 +35,6 @@ exports.find = function(cb){
       for(let i = 0;i < image.length;i++){
         result.push({url:image[i].url,name:image[i].name});
       }
-      Image.remove({},function(err){
-        if(!err){
-          console.log('删除成功');
-        }
-      });
       cb(result);
     }
   });
