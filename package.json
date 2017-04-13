@@ -15,6 +15,7 @@
     "koa": "^2.2.0"
   },
   "devDependencies": {
+    "ali-oss": "^4.8.0",
     "bluebird": "^3.5.0",
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.3",
