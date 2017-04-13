@@ -39,3 +39,22 @@ exports.find = function(cb){
     }
   });
 }
+exports.delete = function(name){
+  Image.find({'name':name},function(err,res){
+    if(err){
+      console.log(err);
+    }
+    else{
+      if(res){
+        Image.remove({'name':name},function(err){
+          if(err){
+            console.log(err);
+          }
+          else{
+            console.log('delete success');
+          }
+        });
+      }
+    }
+  })
+}
