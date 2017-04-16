@@ -23,4 +23,10 @@ mongoose.connect(DB_URL);
 //     },i*2000);
 //   }
 // });
-Image.find(file.downLoadImage);
+for(let i = 0;i< 80;i++){
+  setTimeout(function(){
+    console.log('第' + i+ '次');
+    Image.find(file.downLoadImage);
+  },i*10000);
+}
+

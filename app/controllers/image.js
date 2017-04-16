@@ -37,7 +37,7 @@ exports.find = function(cb){
       }
       cb(result);
     }
-  });
+  }).limit(200);
 }
 exports.delete = function(name){
   Image.find({'name':name},function(err,res){
