@@ -6,10 +6,10 @@ const Image = require('../app/controllers/image');
 
 exports.downLoadImage = function (result) {
   const client = new OSS({
-    region: 'oss-cn-shenzhen',
-    accessKeyId: 'LTAIQM3IZQg4blnJ',
-    accessKeySecret: 'G5Wni5yILnzAITPceB56BVZcmrQ3mP',
-    bucket: 'xiaodiwaimai'
+    region: '',
+    accessKeyId: '',
+    accessKeySecret: '',
+    bucket: ''
   });
   result.forEach(function (item) {
     var req = superagent.get(item.url).set({
